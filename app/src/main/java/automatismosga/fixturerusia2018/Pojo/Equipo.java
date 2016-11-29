@@ -16,6 +16,8 @@ public class Equipo {
         this.puntos = resultado;
     }
 
+
+
     public String getNombre() {
         return nombre;
     }

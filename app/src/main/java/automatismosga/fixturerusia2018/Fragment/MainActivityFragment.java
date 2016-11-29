@@ -29,10 +29,9 @@ Declarar instancias globales
     private RecyclerView.LayoutManager lManager;
 
 
-
-
     // Inicializar array con equipos y sus datos
     List items = new ArrayList();
+
 
 
 
@@ -90,10 +89,13 @@ Declarar instancias globales
     private void inicializarDatos() {
 
 
+
+
         items.add(new Equipo(R.drawable.bandera_brasil, "Brasil", 2));
         items.add(new Equipo(R.drawable.bandera_uruguay, "Uruguay", 4));
         items.add(new Equipo(R.drawable.bandera_argentina, "Argentina", 3));
         items.add(new Equipo(R.drawable.bandera_colombia, "Colombia", 0));
+
     }
 
 }

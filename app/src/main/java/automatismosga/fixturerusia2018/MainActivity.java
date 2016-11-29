@@ -6,18 +6,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
-import java.util.ArrayList;
-
 import automatismosga.fixturerusia2018.Adapter.FragmentAdapter;
 import automatismosga.fixturerusia2018.Fragment.GrupoAFragment;
 import automatismosga.fixturerusia2018.Fragment.MainActivityFragment;
-import automatismosga.fixturerusia2018.Pojo.Category;
 
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TabLayout tabLayout;
-    ArrayList<Category> category = new ArrayList<Category>();
+
 
     ViewPager pager = null;
 

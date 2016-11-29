@@ -10,18 +10,18 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import automatismosga.fixturerusia2018.Pojo.Category;
+import automatismosga.fixturerusia2018.Pojo.Equipo;
 import automatismosga.fixturerusia2018.R;
 
 /**
  * Created by Gus on 29/11/2016.
  */
-public class CategoryListViewAdapter extends BaseAdapter {
+public class EquipoListViewAdapter extends BaseAdapter {
 
     protected Activity activity;
-    protected ArrayList<Category> items;
+    protected ArrayList<Equipo> items;
 
-    public CategoryListViewAdapter(Activity activity, ArrayList<Category> items) {
+    public EquipoListViewAdapter(Activity activity, ArrayList<Equipo> items) {
         this.activity = activity;
         this.items = items;
     }
@@ -35,9 +35,9 @@ public class CategoryListViewAdapter extends BaseAdapter {
         items.clear();
     }
 
-    public void addAll(ArrayList<Category> category) {
-        for (int i = 0; i < category.size(); i++) {
-            items.add(category.get(i));
+    public void addAll(ArrayList<Equipo> equipo) {
+        for (int i = 0; i < equipo.size(); i++) {
+            items.add(equipo.get(i));
         }
     }
 
@@ -58,19 +58,16 @@ public class CategoryListViewAdapter extends BaseAdapter {
 
         if (convertView == null) {
             LayoutInflater inf = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            v = inf.inflate(R.layout.item_category, null);
+            v = inf.inflate(R.layout.list_view_grupo_a, null);
         }
 
-        Category dir = items.get(position);
+        Equipo dir = items.get(position);
 
-        TextView title = (TextView) v.findViewById(R.id.category);
-        title.setText(dir.getTitle());
+        TextView tvEquipo1 = (TextView) v.findViewById(R.id.tvEquipo1);
+        tvEquipo1.setText(dir.getNombre());
 
-        TextView description = (TextView) v.findViewById(R.id.texto);
-        description.setText(dir.getDescription());
 
-        TextView description2 = (TextView) v.findViewById(R.id.texto2);
-        description.setText(dir.getDescription2());
+
 
 
         return v;

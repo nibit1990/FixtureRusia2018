@@ -10,8 +10,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import automatismosga.fixturerusia2018.Adapter.CategoryListViewAdapter;
-import automatismosga.fixturerusia2018.Pojo.Category;
+import automatismosga.fixturerusia2018.Adapter.EquipoListViewAdapter;
+import automatismosga.fixturerusia2018.Pojo.Equipo;
 import automatismosga.fixturerusia2018.R;
 
 /**
@@ -20,7 +20,7 @@ import automatismosga.fixturerusia2018.R;
 public class GrupoAFragment extends Fragment {
 
     ListView mLeadsList;
-    ArrayList<Category> category = new ArrayList<Category>();
+    ArrayList<Equipo> equipo = new ArrayList<Equipo>();
 //...
 
 
@@ -53,12 +53,12 @@ public class GrupoAFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //return super.onCreateView(inflater, container, savedInstanceState);
         View v = inflater.inflate(R.layout.fragment_grupo_a, container, false);
-        ListView lv = (ListView)v.findViewById(R.id.leads_list);
+        ListView lv = (ListView)v.findViewById(R.id.lv_partidos);
 
-        CategoryListViewAdapter adapter = new CategoryListViewAdapter(getActivity(),category);
+        EquipoListViewAdapter adapter = new EquipoListViewAdapter(getActivity(),equipo);
 
         lv.setAdapter(adapter);
-        category.add(new Category( "Uruguay", "3", "Colombia", "2"));
+        equipo.add(new Equipo( 2, "Uruguay", 4 ));
 
 
         return v;

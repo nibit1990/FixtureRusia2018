@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ivBanderaEquipo1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="tvEquipo1"
+            android:id="@+id/tvEquipo1"
+            android:layout_below="@+id/ivBandera"
+            android:textStyle="bold"
+     />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/etResultadoEquipo1"
+            android:text="Resultado..."
+            android:layout_below="@+id/tvEquipo1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ivBanderaEquipo2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="tvEquipo2"
+            android:id="@+id/tvEquipo2"
+            android:layout_below="@+id/ivBanderaEquipo2"
+            android:textStyle="bold"
+            
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/etResultadoEquipo2"
+            android:text="Resultado..."
+            android:layout_below="@+id/tvEquipo2"/>
+    </LinearLayout>
+
+
+</LinearLayout>

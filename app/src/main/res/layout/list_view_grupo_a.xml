@@ -51,7 +51,7 @@
             android:id="@+id/tvEquipo2"
             android:layout_below="@+id/ivBanderaEquipo2"
             android:textStyle="bold"
-            
+
             />
 
         <EditText

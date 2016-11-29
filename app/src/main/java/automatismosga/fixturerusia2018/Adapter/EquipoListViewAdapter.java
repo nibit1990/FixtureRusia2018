@@ -2,11 +2,18 @@ package automatismosga.fixturerusia2018.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 
 import java.util.ArrayList;
 
@@ -65,6 +72,25 @@ public class EquipoListViewAdapter extends BaseAdapter {
 
         TextView tvEquipo1 = (TextView) v.findViewById(R.id.tvEquipo1);
         tvEquipo1.setText(dir.getNombre());
+        EditText etResultadoEquipo1 = (EditText) v.findViewById(R.id.etResultadoEquipo1);
+
+        etResultadoEquipo1.addTextChangedListener(new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+
+                // you can call or do what you want with your EditText here
+
+
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+         
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+        });
+
+
 
 
 
@@ -72,4 +98,6 @@ public class EquipoListViewAdapter extends BaseAdapter {
 
         return v;
     }
+
+
 }

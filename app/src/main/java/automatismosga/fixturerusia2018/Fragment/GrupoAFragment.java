@@ -19,7 +19,7 @@ import automatismosga.fixturerusia2018.R;
  */
 public class GrupoAFragment extends Fragment {
 
-    ListView mLeadsList;
+
     ArrayList<Equipo> equipo = new ArrayList<Equipo>();
 //...
 
@@ -59,6 +59,9 @@ public class GrupoAFragment extends Fragment {
 
         lv.setAdapter(adapter);
         equipo.add(new Equipo( 2, "Uruguay", 4 ));
+        equipo.add(new Equipo( 7, "Argentina", 3 ));
+        equipo.add(new Equipo( 2, "Brasil", 1 ));
+        equipo.add(new Equipo( 2, "Colombia", 0 ));
 
 
         return v;

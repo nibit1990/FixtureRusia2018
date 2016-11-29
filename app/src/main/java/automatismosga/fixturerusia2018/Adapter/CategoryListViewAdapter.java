@@ -1,4 +1,4 @@
-package automatismosga.fixturerusia2018;
+package automatismosga.fixturerusia2018.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,15 +10,18 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import automatismosga.fixturerusia2018.Pojo.Category;
+import automatismosga.fixturerusia2018.R;
+
 /**
  * Created by Gus on 29/11/2016.
  */
-public class AdapterCategory extends BaseAdapter {
+public class CategoryListViewAdapter extends BaseAdapter {
 
     protected Activity activity;
     protected ArrayList<Category> items;
 
-    public AdapterCategory(Activity activity, ArrayList<Category> items) {
+    public CategoryListViewAdapter(Activity activity, ArrayList<Category> items) {
         this.activity = activity;
         this.items = items;
     }

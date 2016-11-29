@@ -10,8 +10,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import automatismosga.fixturerusia2018.AdapterCategory;
-import automatismosga.fixturerusia2018.Category;
+import automatismosga.fixturerusia2018.Adapter.CategoryListViewAdapter;
+import automatismosga.fixturerusia2018.Pojo.Category;
 import automatismosga.fixturerusia2018.R;
 
 /**
@@ -55,10 +55,10 @@ public class GrupoAFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_grupo_a, container, false);
         ListView lv = (ListView)v.findViewById(R.id.leads_list);
 
-        AdapterCategory adapter = new AdapterCategory(getActivity(),category);
+        CategoryListViewAdapter adapter = new CategoryListViewAdapter(getActivity(),category);
 
         lv.setAdapter(adapter);
-        category.add(new Category( "5", "5", "3", "s"));
+        category.add(new Category( "Uruguay", "3", "Colombia", "2"));
 
 
         return v;

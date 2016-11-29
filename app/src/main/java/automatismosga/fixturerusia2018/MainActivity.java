@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import automatismosga.fixturerusia2018.Adapter.FragmentAdapter;
 import automatismosga.fixturerusia2018.Fragment.GrupoAFragment;
 import automatismosga.fixturerusia2018.Fragment.MainActivityFragment;
+import automatismosga.fixturerusia2018.Pojo.Category;
 
 public class MainActivity extends AppCompatActivity {
 

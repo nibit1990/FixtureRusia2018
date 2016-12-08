@@ -33,6 +33,9 @@ public class EquipoReciclerViewAdapter extends RecyclerView.Adapter<EquipoRecicl
         public TextView tvNombre;
         public TextView tvPuntos;
 
+        public String Nombre;
+        public int Puntos;
+
         public EquipoViewHolder(View v) {
             super(v);
 
@@ -44,7 +47,8 @@ public class EquipoReciclerViewAdapter extends RecyclerView.Adapter<EquipoRecicl
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-            Toast.makeText(itemView.getContext(), "Position:" + Integer.toString(getLayoutPosition()), Toast.LENGTH_SHORT).show();
+
+            Toast.makeText(itemView.getContext(), "Nombre:" + Nombre + " Puntos:" + Puntos, Toast.LENGTH_SHORT).show();
 
 
 
@@ -87,6 +91,10 @@ public class EquipoReciclerViewAdapter extends RecyclerView.Adapter<EquipoRecicl
         viewHolder.ivBandera.setImageResource(items.get(position).getBandera());
         viewHolder.tvNombre.setText(items.get(position).getNombre());
         viewHolder.tvPuntos.setText("Puntos:"+String.valueOf(items.get(position).getPuntos()));
+
+        viewHolder.Nombre = items.get(position).getNombre();
+        viewHolder.Puntos = items.get(position).getPuntos();
+
 
         viewHolder.ivBandera.setOnClickListener(new View.OnClickListener(){
 

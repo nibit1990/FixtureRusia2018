@@ -1,5 +1,10 @@
 package automatismosga.fixturerusia2018.Pojo;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import automatismosga.fixturerusia2018.R;
+
 /**
  * Created by Gus on 29/11/2016.
  */
@@ -16,7 +21,17 @@ public class Equipo {
         this.puntos = resultado;
     }
 
+    public void setBandera(int bandera) {
+        this.bandera = bandera;
+    }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
 
     public String getNombre() {
         return nombre;
@@ -29,5 +44,9 @@ public class Equipo {
     public int getBandera() {
         return bandera;
     }
+
+
+
 }
+
 

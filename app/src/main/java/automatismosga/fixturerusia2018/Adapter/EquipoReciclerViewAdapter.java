@@ -1,11 +1,14 @@
 package automatismosga.fixturerusia2018.Adapter;
 
+import android.app.Activity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -23,6 +26,7 @@ public class EquipoReciclerViewAdapter extends RecyclerView.Adapter<EquipoRecicl
 
 
 
+
     public static class EquipoViewHolder extends RecyclerView.ViewHolder {
         // Campos respectivos de un item
         public ImageView ivBandera;
@@ -31,12 +35,23 @@ public class EquipoReciclerViewAdapter extends RecyclerView.Adapter<EquipoRecicl
 
         public EquipoViewHolder(View v) {
             super(v);
+
             ivBandera = (ImageView) v.findViewById(R.id.ivBandera);
             tvNombre = (TextView) v.findViewById(R.id.tvNombre);
             tvPuntos = (TextView) v.findViewById(R.id.puntos);
-        }
-    }
 
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+            Toast.makeText(itemView.getContext(), "Position:" + Integer.toString(getLayoutPosition()), Toast.LENGTH_SHORT).show();
+
+
+
+                }
+            });
+    }
+    }
 
 
 
@@ -67,10 +82,26 @@ public class EquipoReciclerViewAdapter extends RecyclerView.Adapter<EquipoRecicl
 
 
     @Override
-    public void onBindViewHolder(EquipoViewHolder viewHolder, int i) {
-        viewHolder.ivBandera.setImageResource(items.get(i).getBandera());
-        viewHolder.tvNombre.setText(items.get(i).getNombre());
-        viewHolder.tvPuntos.setText("Puntos:"+String.valueOf(items.get(i).getPuntos()));
+    public void onBindViewHolder(final EquipoViewHolder viewHolder, final int position) {
+
+        viewHolder.ivBandera.setImageResource(items.get(position).getBandera());
+        viewHolder.tvNombre.setText(items.get(position).getNombre());
+        viewHolder.tvPuntos.setText("Puntos:"+String.valueOf(items.get(position).getPuntos()));
+
+        viewHolder.ivBandera.setOnClickListener(new View.OnClickListener(){
+
+                @Override
+            public void onClick(View v) {
+                    // item clicked
+
+
+                }
+            });
+
+
+
+
+
     }
 
 
